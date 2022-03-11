@@ -9,6 +9,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use("/api/politic", politicRoutes);
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => console.log(`server running in the port  ${PORT}`));
