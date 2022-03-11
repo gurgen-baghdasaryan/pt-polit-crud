@@ -5,10 +5,6 @@ const politicSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  lastName: {
-    type: String,
-    required: true,
-  },
   politicalParty: {
     type: String,
     required: true,
