@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { GrUpdate } from "react-icons/gr";
 
-import "./PoliticList.css";
 import axios from "axios";
 
 const PoliticList = () => {
   const [list, setList] = useState([]);
   useEffect(() => {
     const getlists = async () => {
-      const res = await axios.get("http://localhost:5000/api/politic/");
+      const res = await axios.get("http://localhost:5000/api/politic");
       setList(res.data);
     };
     getlists();

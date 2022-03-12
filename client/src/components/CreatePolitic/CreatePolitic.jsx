@@ -32,7 +32,7 @@ const CreatePolitic = () => {
       salary: politic.salary,
       observations: politic.observations,
     };
-    await axios.post("http://localhost:5000/api/politic/", newPolitic);
+    await axios.post("http://localhost:5000/api/politic", newPolitic);
     setPolitic({ ...valueInitial });
   };
   
@@ -114,7 +114,7 @@ const CreatePolitic = () => {
             />
           </div>
           <div className="mb-3">
-            <label>ccaa:</label>
+            <label>CCAA:</label>
             <input
               type="text"
               className="form-control"
