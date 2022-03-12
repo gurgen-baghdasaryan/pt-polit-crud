@@ -27,7 +27,7 @@ politCtrl.createPolitic = async (req, res) => {
 
     // We are storing a new document of what comes from the Clientee
     await newPolitic.save();
-    res.json({ message: "The product has been created" });
+    res.json({ message: "The politic has been created" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: " Server error" });
@@ -68,7 +68,7 @@ politCtrl.updatePolitic = async (req, res) => {
       salary,
       observations,
     });
-    res.json({ message: "The product has been updated" });
+    res.json({ message: "The politic has been updated" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: " Server error" });
