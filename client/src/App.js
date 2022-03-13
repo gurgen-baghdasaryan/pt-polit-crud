@@ -16,7 +16,7 @@ function App() {
         <Routes>
           {/* Here we are going to include our routes */}
           <Route exact path="/" element={<PoliticList />} />
-          <Route exact path="/createpolitic/" element={<CreatePolitic />} />
+          <Route exact path="/CreatePolitic/" element={<CreatePolitic />} />
           <Route exact path="/edit/:id" element={<CreatePolitic />} />
           <Route exact path="/politic/:id" element={<Politic />} />
           {/* This route is for error handling */}

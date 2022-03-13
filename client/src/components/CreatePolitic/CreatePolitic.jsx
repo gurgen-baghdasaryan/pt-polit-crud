@@ -60,15 +60,18 @@ const CreatePolitic = () => {
   };
   //logic to make the API request
   const editOne = async (idValue) => {
-    const res = await axios.get("http://localhost:5000/api/politic/" + idValue);
-    setPolitic({
-      name: res.data.name,
-      politicalParty: res.data.politicalParty,
-      Charge: res.data.Charge,
-      ccaa: res.data.ccaa,
-      salary: res.data.salary,
-      observations: res.data.observations,
-    });
+    if (idValue) {
+      const res = await axios.get("http://localhost:5000/api/politic/" + idValue);
+      setPolitic({
+        name: res.data.name,
+        politicalParty: res.data.politicalParty,
+        Charge: res.data.Charge,
+        ccaa: res.data.ccaa,
+        salary: res.data.salary,
+        observations: res.data.observations,
+      });
+    }
+   
   };
 
   // The logic of this useEffect is if the id has value, do a function where we get request

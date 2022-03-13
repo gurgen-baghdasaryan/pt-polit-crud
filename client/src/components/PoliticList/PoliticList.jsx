@@ -16,12 +16,16 @@ const PoliticList = () => {
   const [show, setShow] = useState([]);
 
   const [page, setPage] = useState(1);
+  const [update, setUpdate] = useState(false)
   const handleChange = (event, value) => {
     setPage(value);
   };
   //The logic to delete the product through an id
-  const deletePolitic = async (id) => {
-    await axios.delete("http://localhost:5000/api/politic/" + id);
+  const deletePolitic =  (id) => {
+
+     axios.delete("http://localhost:5000/api/politic/" + id)
+     .then(res=>{setUpdate(!update)})
+    console.log(deletePolitic);
   };
   // This useEffect we will use as many times as necessary to render the value that we have in our API
   useEffect(() => {
@@ -33,7 +37,7 @@ const PoliticList = () => {
       setShow(res.data.slice(1, 50));
     };
     getlists();
-  }, []);
+  }, [update]);
 
   
 
@@ -41,9 +45,7 @@ const PoliticList = () => {
   useEffect(() => {
     const data = list.slice((page - 1) * 50, page * 50);
     setShow(data);
-
   }, [page]);
-
   
 
   return (
