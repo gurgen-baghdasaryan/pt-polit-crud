@@ -39,10 +39,12 @@ const PoliticList = () => {
   };
   return (
     <div className="row">
+    {/* Pagination box */}
       <Stack spacing={2}>
         <Typography>Page: {page}</Typography>
         <Pagination count={Math.ceil(list.length / 50)} page={page} onChange={handleChange} />
       </Stack>
+    {/* Pagination box */}  
       {console.log(page)}
       {show.map((lista) => (
         <div className="col-md-4 p-2" key={lista._id}>
