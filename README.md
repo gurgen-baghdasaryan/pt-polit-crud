@@ -3,6 +3,7 @@
 ## Installation
 
 ###### pt-polit-crud APP
+
 Install dependecies and devDependencies
 
 ```sh
@@ -70,14 +71,11 @@ The project is deployed in [GitHub Pages](https://pages.github.com/)
     <a href="https://reactjs.org/" target="_blank">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
     </a>  
-      <a href="https://www.npmjs.com/package/lowdb" target="_blank">
-      <img src="https://avatars.githubusercontent.com/u/26432625?s=200&v=4" alt="lowdb" width="40" height="40"/>
-    </a>
-    <a href="https://git-scm.com/" target="_blank">
+      <a href="https://git-scm.com/" target="_blank">
         <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
     </a>
       <a href="https://www.mongodb.com/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1280px-MongoDB_Logo.svg.png" alt="mongoDB" width="40" height="40"/>
+        <img src="https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png" alt="mongoDB" width="40" height="40"/>
     </a>
    
   
