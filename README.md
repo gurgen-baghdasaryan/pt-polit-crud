@@ -52,7 +52,6 @@ npm start
 
 ## Languages and Tools:
 
-The project is deployed in [GitHub Pages](https://pages.github.com/)  
 <br>
 
 <p align="left">

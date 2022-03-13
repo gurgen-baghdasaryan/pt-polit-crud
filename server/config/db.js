@@ -1,5 +1,7 @@
 require("dotenv").config();
-const mongoose = require("mongoose");
+
+// Connection string to be able to connect our server with our database
+const mongoose = require("mongoose"); 
 
 const connectionDB = async () => {
   try {
