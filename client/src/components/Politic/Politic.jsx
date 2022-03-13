@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 const Politic = () => {
+  // State where the politic is stored
   const [politic, setPolitic] = useState({});
 
+  // Id of product
   const { id } = useParams();
-
+   
+  // The logic of this useEffect allows to find a specific politic by the id
   useEffect(() => {
     const getPoliticById = async () => {
       const res = await axios.get(`http://localhost:5000/api/politic/${id}`);
@@ -25,6 +28,7 @@ const Politic = () => {
         >
           <div className="card">
             <div className="card-body">
+                {/* The profuct information part*/}
               <h5 className="card-title">Nombre: {politic.name}</h5>
               <p className="card-text">
                 Partido político: {politic.politicalParty}
@@ -39,6 +43,7 @@ const Politic = () => {
               </li>
             </ul>
             <div className="card-body">
+            {/* The edit button */}
               <Link
                 className="btn btn-outline-dark"
                 to={"/edit/" + politic._id}
