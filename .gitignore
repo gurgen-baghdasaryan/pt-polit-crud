@@ -9,8 +9,7 @@ node_modules/
 # testing
 /coverage
 
-#server
-server
+
 # production
 /build
 
