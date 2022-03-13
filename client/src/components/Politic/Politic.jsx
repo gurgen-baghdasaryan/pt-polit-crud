@@ -32,13 +32,12 @@ const Politic = () => {
                 <p className="card-text">Sueldo: {politic.salary}</p>
                 <p className="card-text">Cargo: {politic.Charge}</p>
                 <p className="card-text">CCAA: {politic.ccaa}</p>
-                <p className="card-text">Screen: {politic.ccaa}</p>
                 <p className="card-text">Observación: {politic.observations}</p>
                 <div className="card-body d-flex justify-content-around">
                 <Link
                 className="btn btn-outline-dark"
                 to={"/edit/" + politic._id}
-              >
+                >
                 <GrUpdate />
               </Link>
                   
