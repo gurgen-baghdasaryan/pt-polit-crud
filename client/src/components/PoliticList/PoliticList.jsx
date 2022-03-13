@@ -19,12 +19,10 @@ const PoliticList = () => {
   const handleChange = (event, value) => {
     setPage(value);
   };
-
   //The logic to delete the product through an id
   const deletePolitic = async (id) => {
-    await axios.delete("hhttp://localhost:5000/api/politic/" + id);
+    await axios.delete("http://localhost:5000/api/politic/" + id);
   };
-
   // This useEffect we will use as many times as necessary to render the value that we have in our API
   useEffect(() => {
     const getlists = async () => {
@@ -37,11 +35,13 @@ const PoliticList = () => {
     getlists();
   }, []);
 
+  
+
   // This useEffect is pagination logic
   useEffect(() => {
     const data = list.slice((page - 1) * 50, page * 50);
     setShow(data);
-  }, [page]);
+  }, [page,list]);
 
   return (
     <div className="row">
