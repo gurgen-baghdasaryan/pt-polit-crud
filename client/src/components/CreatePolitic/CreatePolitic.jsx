@@ -35,7 +35,7 @@ const CreatePolitic = () => {
     await axios.post("http://localhost:5000/api/politic", newPolitic);
     setPolitic({ ...valueInitial });
   };
-  
+
   const updatePolitic = async (e) => {
     e.preventDefault();
     const newUser = {
@@ -50,21 +50,17 @@ const CreatePolitic = () => {
     setPolitic({ ...valueInitial });
     setSubId("");
   };
-  //logic to make the API request
 
   const editOne = async (idValue) => {
-    const res = await axios.get(
-      "http://localhost:5000/api/politic/" + idValue 
-    );
+    const res = await axios.get("http://localhost:5000/api/politic/" + idValue);
     setPolitic({
       name: res.data.name,
       politicalParty: res.data.politicalParty,
       Charge: res.data.Charge,
       ccaa: res.data.ccaa,
-      salary:res.data.salary, 
-      observations:res.data.observations, 
+      salary: res.data.salary,
+      observations: res.data.observations,
     });
-
   };
 
   useEffect(() => {
@@ -82,7 +78,7 @@ const CreatePolitic = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="name"
+              placeholder="..."
               required
               name="name"
               value={politic.name}
@@ -90,11 +86,11 @@ const CreatePolitic = () => {
             />
           </div>
           <div className="mb-3">
-            <label>Partido polític:</label>
+            <label>Partido político:</label>
             <input
               type="text"
               className="form-control"
-              placeholder="politicalParty"
+              placeholder="..."
               required
               name="politicalParty"
               value={politic.politicalParty}
@@ -106,7 +102,7 @@ const CreatePolitic = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Charge"
+              placeholder="..."
               required
               name="Charge"
               value={politic.Charge}
@@ -118,7 +114,7 @@ const CreatePolitic = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="ccaa..."
+              placeholder="..."
               name="ccaa"
               value={politic.ccaa}
               onChange={dataCapture}
@@ -141,24 +137,26 @@ const CreatePolitic = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="observations"
+              placeholder="..."
               required
               name="observations"
               value={politic.observations}
               onChange={dataCapture}
             />
           </div>
-          
-          <button className="btn btn-primary form-control">Guardar perfil</button>
+
+          <button className="btn btn-primary form-control">
+            Guardar perfil
+          </button>
         </form>
         <form onSubmit={updatePolitic}>
           <button className="btn btn-primary form-control mt-1">
-          Actualizar perfil
+            Actualizar perfil
           </button>
         </form>
       </div>
     </div>
-    );
+  );
 };
 
 export default CreatePolitic;

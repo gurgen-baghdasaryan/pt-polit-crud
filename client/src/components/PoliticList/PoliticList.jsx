@@ -29,25 +29,28 @@ const PoliticList = () => {
   }, []);
 
   useEffect(() => {
-    const data = list.slice((page-1)*50, page*50)
-    setShow(data)
-    
-  }, [page])
-  
+    const data = list.slice((page - 1) * 50, page * 50);
+    setShow(data);
+  }, [page]);
+
   const deletePolitic = async (id) => {
     await axios.delete("hhttp://localhost:5000/api/politic/" + id);
   };
   return (
     <div className="row">
-    {/* Pagination box */}
+      {/* Pagination box */}
       <Stack spacing={2}>
         <Typography>Page: {page}</Typography>
-        <Pagination count={Math.ceil(list.length / 50)} page={page} onChange={handleChange} />
+        <Pagination
+          count={Math.ceil(list.length / 50)}
+          page={page}
+          onChange={handleChange}
+        />
       </Stack>
-    {/* Pagination box */}  
+      {/* Pagination box */}
       {console.log(page)}
       {show.map((lista) => (
-        <div className="col-md-4 p-2" key={lista._id}>
+        <div className="col-md-4 p-2 " key={lista._id}>
           <div className="card">
             <div className="card-header">
               <h5>Nombre: {lista.name}</h5>
@@ -63,7 +66,7 @@ const PoliticList = () => {
                   className="btn btn-outline-success"
                   to={"/politic/" + lista._id}
                 >
-                  Ver mas
+                  Ver más
                 </Link>
               </div>
               <div className="card-body d-flex justify-content-around">

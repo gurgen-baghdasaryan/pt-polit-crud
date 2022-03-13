@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Politic
+          Politica
         </Link>
         <button
           className="navbar-toggler"
@@ -23,7 +23,7 @@ const NavBar = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/CreatePolitic">
-                Create Politic
+                Crear Politico
               </Link>
             </li>
           </ul>
