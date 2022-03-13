@@ -41,7 +41,10 @@ const PoliticList = () => {
   useEffect(() => {
     const data = list.slice((page - 1) * 50, page * 50);
     setShow(data);
-  }, [page,list]);
+
+  }, [page]);
+
+  
 
   return (
     <div className="row">
