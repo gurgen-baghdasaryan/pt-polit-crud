@@ -8,6 +8,7 @@ const cors = require("cors");
 connectionDB();
 
 // This constant stores what we already require from express
+// This constant stores what we already require from express
 const app = express();
 
 //middleware/logic

@@ -51,7 +51,7 @@ npm start
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Languages and Tools:
-
+The project is deployed in : https://622e7e6452294524f041d90b--mystifying-banach-c8b9cd.netlify.app/
 <br>
 
 <p align="left">
