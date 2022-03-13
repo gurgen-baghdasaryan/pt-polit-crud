@@ -23,7 +23,7 @@ const PoliticList = () => {
   //The logic to delete the product through an id
   const deletePolitic =  (id) => {
 
-     axios.delete("http://localhost:5000/api/politic/" + id)
+     axios.delete("https://politicapp.herokuapp.com/api/politic/" + id)
      .then(res=>{setUpdate(!update)})
     console.log(deletePolitic);
   };
@@ -31,7 +31,7 @@ const PoliticList = () => {
   useEffect(() => {
     const getlists = async () => {
       // The logic of this useEffect is that every time there is a change in the list state, render the component to update the information.
-      const res = await axios.get("http://localhost:5000/api/politic");
+      const res = await axios.get("https://politicapp.herokuapp.com/api/politic");
       // In setList we store what we receive from data
       setList(res.data);
       setShow(res.data.slice(1, 50));

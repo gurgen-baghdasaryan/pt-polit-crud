@@ -7,6 +7,7 @@ import PoliticList from "./components/PoliticList/PoliticList";
 import CreatePolitic from "./components/CreatePolitic/CreatePolitic";
 import Politic from "./components/Politic/Politic";
 import Error from "./components/Error/Error";
+// import Error from "./components/Error/Error";
 
 function App() {
   return (

@@ -14,7 +14,7 @@ const Politic = () => {
   // The logic of this useEffect allows to find a specific politic by the id
   useEffect(() => {
     const getPoliticById = async () => {
-      const res = await axios.get(`http://localhost:5000/api/politic/${id}`);
+      const res = await axios.get(`https://politicapp.herokuapp.com/api/politic/${id}`);
       setPolitic(res.data);
     };
     getPoliticById();
