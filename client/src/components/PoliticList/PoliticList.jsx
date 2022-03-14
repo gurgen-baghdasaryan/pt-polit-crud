@@ -71,7 +71,7 @@ const PoliticList = () => {
             </div>
             <div className="card-body">
               <p>Partido político: {lista.politicalParty}</p>
-              <p>Sueldo: {lista.salary}$</p>
+              <p>Sueldo: {lista.salary}€</p>
             </div>
 
             <div className="card-footer d-flex">

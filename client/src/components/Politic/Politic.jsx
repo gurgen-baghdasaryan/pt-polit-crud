@@ -35,7 +35,7 @@ const Politic = () => {
               </p>
             </div>
             <ul className="list-group list-group-flush">
-              <li className="list-group-item">Sueldo: {politic.salary}</li>
+              <li className="list-group-item">Sueldo: {politic.salary}€</li>
               <li className="list-group-item">Cargo: {politic.Charge}</li>
               <li className="list-group-item">CCAA: {politic.ccaa}</li>
               <li className="list-group-item">
