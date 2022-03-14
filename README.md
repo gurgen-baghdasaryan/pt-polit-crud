@@ -48,10 +48,15 @@ Enter the following command
 npm start
 ```
 
+<!-- Deploy -->
+
+The project is deployed in : https://622f5c0a957ed80077f79955--mystifying-banach-c8b9cd.netlify.app/
+The project SERVER is deployed in : https://politicapp.herokuapp.com/
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Languages and Tools:
-The project is deployed in : https://622e7e6452294524f041d90b--mystifying-banach-c8b9cd.netlify.app/
+
 <br>
 
 <p align="left">

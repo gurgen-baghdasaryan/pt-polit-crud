@@ -53,7 +53,10 @@ const CreatePolitic = () => {
       observations: politic.observations,
     };
     //The put petition logic concatenated with subId
-    await axios.put("https://politicapp.herokuapp.com/api/politic/" + subId, newUser);
+    await axios.put(
+      "https://politicapp.herokuapp.com/api/politic/" + subId,
+      newUser
+    );
     setPolitic({ ...valueInitial });
     // Clean up our state
     setSubId("");
@@ -61,7 +64,9 @@ const CreatePolitic = () => {
   //logic to make the API request
   const editOne = async (idValue) => {
     if (idValue) {
-      const res = await axios.get("https://politicapp.herokuapp.com/api/politic/" + idValue);
+      const res = await axios.get(
+        "https://politicapp.herokuapp.com/api/politic/" + idValue
+      );
       setPolitic({
         name: res.data.name,
         politicalParty: res.data.politicalParty,
@@ -71,7 +76,6 @@ const CreatePolitic = () => {
         observations: res.data.observations,
       });
     }
-   
   };
 
   // The logic of this useEffect is if the id has value, do a function where we get request

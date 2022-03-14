@@ -16,22 +16,26 @@ const PoliticList = () => {
   const [show, setShow] = useState([]);
 
   const [page, setPage] = useState(1);
-  const [update, setUpdate] = useState(false)
+  const [update, setUpdate] = useState(false);
   const handleChange = (event, value) => {
     setPage(value);
   };
   //The logic to delete the product through an id
-  const deletePolitic =  (id) => {
-
-     axios.delete("https://politicapp.herokuapp.com/api/politic/" + id)
-     .then(res=>{setUpdate(!update)})
+  const deletePolitic = (id) => {
+    axios
+      .delete("https://politicapp.herokuapp.com/api/politic/" + id)
+      .then((res) => {
+        setUpdate(!update);
+      });
     console.log(deletePolitic);
   };
   // This useEffect we will use as many times as necessary to render the value that we have in our API
   useEffect(() => {
     const getlists = async () => {
       // The logic of this useEffect is that every time there is a change in the list state, render the component to update the information.
-      const res = await axios.get("https://politicapp.herokuapp.com/api/politic");
+      const res = await axios.get(
+        "https://politicapp.herokuapp.com/api/politic"
+      );
       // In setList we store what we receive from data
       setList(res.data);
       setShow(res.data.slice(1, 50));
@@ -39,14 +43,11 @@ const PoliticList = () => {
     getlists();
   }, [update]);
 
-  
-
   // This useEffect is pagination logic
   useEffect(() => {
     const data = list.slice((page - 1) * 50, page * 50);
     setShow(data);
   }, [page]);
-  
 
   return (
     <div className="row">
